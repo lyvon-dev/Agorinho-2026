@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Agro Forte, Futuro Sustentável - Projeto do Concurso Agrinho 2026. Tecnologia, sustentabilidade e agricultura inteligente para um futuro melhor.">
+  <meta name="keywords" content="Agrinho 2026, sustentabilidade, agricultura, tecnologia, meio ambiente, Paraná">
+  <meta name="author" content="Estudante - Concurso Agrinho 2026">
+  <title>Agro Forte, Futuro Sustentável | Concurso Agrinho 2026</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Skip Link para acessibilidade -->
+  <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+
+  <!-- Barra de acessibilidade -->
+  <div class="barra-acessibilidade" role="toolbar" aria-label="Barra de ferramentas de acessibilidade">
+    <div class="container-barra">
+      <span class="barra-titulo"><i data-lucide="accessibility" class="icon-barra"></i> Acessibilidade:</span>
+      <button id="btn-aumentar-fonte" class="btn-acessibilidade" aria-label="Aumentar tamanho da fonte" title="Aumentar fonte">
+        <i data-lucide="type" class="icon-barra"></i> A+
+      </button>
+      <button id="btn-diminuir-fonte" class="btn-acessibilidade" aria-label="Diminuir tamanho da fonte" title="Diminuir fonte">
+        <i data-lucide="type" class="icon-barra"></i> A-
+      </button>
+      <button id="btn-alto-contraste" class="btn-acessibilidade" aria-label="Alternar alto contraste" title="Alto contraste">
+        <i data-lucide="contrast" class="icon-barra"></i> Contraste
+      </button>
+      <button id="btn-modo-escuro" class="btn-acessibilidade" aria-label="Alternar modo escuro" title="Modo escuro">
+        <i data-lucide="moon" class="icon-barra"></i> Modo Escuro
+      </button>
+      <button id="btn-leitura-voz" class="btn-acessibilidade" aria-label="Ativar leitura em voz alta da página" title="Leitura em voz alta">
+        <i data-lucide="volume-2" class="icon-barra"></i> Voz Alta
+      </button>
+      <button id="btn-parar-voz" class="btn-acessibilidade" aria-label="Parar leitura em voz alta" title="Parar voz">
+        <i data-lucide="volume-x" class="icon-barra"></i> Parar
+      </button>
+    </div>
+  </div>
+
+  <!-- Header / Navegação -->
+  <header class="site-header" role="banner">
+    <div class="container">
+      <div class="header-inner">
+        <a href="#" class="logo" aria-label="Página inicial - Agro Forte Futuro Sustentável">
+          <i data-lucide="sprout" class="logo-icon" aria-hidden="true"></i>
+          <div class="logo-texto">
+            <span class="logo-principal">Agro Forte</span>
+            <span class="logo-secundario">Futuro Sustentável</span>
+          </div>
+        </a>
+
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="menu-principal">
+          <i data-lucide="menu" class="icon-menu" aria-hidden="true"></i>
+        </button>
+
+        <nav class="nav-principal" id="menu-principal" role="navigation" aria-label="Menu principal">
+          <ul class="nav-lista">
+            <li><a href="#desafio" class="nav-link">O Desafio</a></li>
+            <li><a href="#tecnologia" class="nav-link">Tecnologia</a></li>
+            <li><a href="#sustentabilidade" class="nav-link">Sustentabilidade</a></li>
+            <li><a href="#simulador" class="nav-link">Simulador</a></li>
+            <li><a href="#quiz" class="nav-link">Quiz</a></li>
+            <li><a href="#linha-tempo" class="nav-link">Linha do Tempo</a></li>
+            <li><a href="#dashboard" class="nav-link">Dashboard</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main id="conteudo-principal" role="main">
+
+    <!-- 1. Hero Section -->
+    <section class="hero" id="inicio" aria-label="Seção principal de apresentação">
+      <div class="hero-overlay"></div>
+      <div class="container">
+        <div class="hero-conteudo">
+          <span class="hero-badge">
+            <i data-lucide="award" aria-hidden="true"></i>
+            Concurso Agrinho 2026
+          </span>
+          <h1 class="hero-titulo">
+            Agro Forte,<br>
+            <span class="destaque-verde">Futuro Sustentável</span>
+          </h1>
+          <p class="hero-subtitulo">
+            A tecnologia transformando a produção rural e protegendo o meio ambiente.
+            Descubra como a inovação pode alimentar o mundo sem destruir o planeta.
+          </p>
+          <div class="hero-botoes">
+            <a href="#desafio" class="btn btn-primario">
+              <i data-lucide="compass" aria-hidden="true"></i>
+              Explorar Projeto
+            </a>
+            <a href="#simulador" class="btn btn-secundario">
+              <i data-lucide="calculator" aria-hidden="true"></i>
+              Simular Economia
+            </a>
+          </div>
+          <div class="hero-estatisticas">
+            <div class="estatistica">
+              <span class="estatistica-numero" data-contador="8000">0</span>
+              <span class="estatistica-label">Milhões de pessoas para alimentar em 2030</span>
+            </div>
+            <div class="estatistica">
+              <span class="estatistica-numero" data-contador="70">0</span>
+              <span class="estatistica-label">% da água doce usada na agricultura</span>
+            </div>
+            <div class="estatistica">
+              <span class="estatistica-numero" data-contador="30">0</span>
+              <span class="estatistica-label">% dos alimentos são desperdiçados</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-scroll">
+        <a href="#desafio" aria-label="Rolar para baixo">
+          <i data-lucide="chevron-down" aria-hidden="true"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- 2. O Desafio Atual -->
+    <section class="secao" id="desafio" aria-labelledby="titulo-desafio">
+      <div class="container">
+        <div class="secao-cabecalho">
+          <span class="secao-tag">O Desafio Atual</span>
+          <h2 id="titulo-desafio" class="secao-titulo">Alimentar o mundo sem destruir o planeta</h2>
+          <p class="secao-descricao">
+            A população mundial cresce a cada dia. Precisamos produzir mais alimentos,
+            mas também proteger nossos recursos naturais para as futuras gerações.
+          </p>
+        </div>
+
+        <div class="cards-grid">
+          <article class="card-desafio">
+            <div class="card-icone">
+              <i data-lucide="users" aria-hidden="true"></i>
+            </div>
+            <h3 class="card-titulo">Crescimento Populacional</h3>
+            <p class="card-texto">
+              Em 2050, seremos cerca de 9,7 bilhões de pessoas no planeta.
+              A demanda por alimentos aumentará em 60% até 2030.
+            </p>
+            <div class="card-dado">
+              <span class="dado-numero">9,7 bi</span>
+              <span class="dado-label">habitantes em 2050</span>
+            </div>
+          </article>
+
+          <article class="card-desafio">
+            <div class="card-icone icone-laranja">
+              <i data-lucide="wheat" aria-hidden="true"></i>
+            </div>
+            <h3 class="card-titulo">Mais Alimentos</h3>
+            <p class="card-texto">
+              Precisamos dobrar a produção de alimentos nas próximas décadas,
+              mas com menos terra, menos água e menos impacto ambiental.
+            </p>
+            <div class="card-dado">
+              <span class="dado-numero">+60%</span>
+              <span class="dado-label">aumento necessário</span>
+            </div>
+          </article>
+
+          <article class="card-desafio">
+            <div class="card-icone icone-azul">
+              <i data-lucide="shield-check" aria-hidden="true"></i>
+            </div>
+            <h3 class="card-titulo">Preservação Ambiental</h3>
+            <p class="card-texto">
+              O agronegócio é responsável por 24% das emissões globais de gases de efeito estufa.
+              Precisamos mudar essa realidade com tecnologia e inovação.
+            </p>
+            <div class="card-dado">
+              <span class="dado-numero">24%</span>
+              <span class="dado-label">das emissões globais</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Tecnologia no Campo -->
+    <section class="secao secao-fundo" id="tecnologia" aria-labelledby="titulo-tecnologia">
+      <div class="container">
+        <div class="secao-cabecalho">
+          <span class="secao-tag">Tecnologia no Campo</span>
+          <h2 id="titulo-tecnologia" class="secao-titulo">Inovações que estão mudando a agricultura</h2>
+          <p class="secao-descricao">
+            A agricultura 4.0 utiliza tecnologias avançadas para produzir mais com menos,
+            economizando recursos e protegendo o meio ambiente.
+          </p>
+        </div>
+
+        <div class="cards-tecnologia">
+          <article class="card-tech" tabindex="0">
+            <div class="card-tech-imagem">
+              <img src="https://images.pexels.com/photos/442116/pexels-photo-442116.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Drone sobrevoando plantação agrícola para monitoramento" loading="lazy">
+            </div>
+            <div class="card-tech-conteudo">
+              <div class="card-tech-icone">
+                <i data-lucide="plane" aria-hidden="true"></i>
+              </div>
+              <h3 class="card-tech-titulo">Drones Agrícolas</h3>
+              <p class="card-tech-texto">
+                Mapeiam lavouras, detectam pragas, aplicam defensivos com precisão
+                e reduzem o uso de produtos químicos em até 90%.
+              </p>
+              <span class="card-tech-tag">Economia: -90% defensivos</span>
+            </div>
+          </article>
+
+          <article class="card-tech" tabindex="0">
+            <div class="card-tech-imagem">
+              <img src="https://images.pexels.com/photos/2132171/pexels-photo-2132171.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Sensor eletrônico para agricultura de precisão" loading="lazy">
+            </div>
+            <div class="card-tech-conteudo">
+              <div class="card-tech-icone icone-azul">
+                <i data-lucide="activity" aria-hidden="true"></i>
+              </div>
+              <h3 class="card-tech-titulo">Sensores Inteligentes</h3>
+              <p class="card-tech-texto">
+                Medem umidade do solo, nutrientes e temperatura em tempo real,
+                permitindo decisões precisas sobre irrigação e adubação.
+              </p>
+              <span class="card-tech-tag">Economia: -40% água</span>
+            </div>
+          </article>
+
+          <article class="card-tech" tabindex="0">
+            <div class="card-tech-imagem">
+              <img src="https://images.pexels.com/photos/2889440/pexels-photo-2889440.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Trator moderno com GPS navegando em campo agrícola" loading="lazy">
+            </div>
+            <div class="card-tech-conteudo">
+              <div class="card-tech-icone icone-laranja">
+                <i data-lucide="map" aria-hidden="true"></i>
+              </div>
+              <h3 class="card-tech-titulo">GPS Agrícola</h3>
+              <p class="card-tech-texto">
+                Guiagem automática de máquinas com precisão de centímetros,
+                eliminando sobreposições e falhas na aplicação de insumos.
+              </p>
+              <span class="card-tech-tag">Economia: -15% insumos</span>
+            </div>
+          </article>
+
+          <article class="card-tech" tabindex="0">
+            <div class="card-tech-imagem">
+              <img src="https://images.pexels.com/photos/1643400/pexels-photo-1643400.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Sistema de irrigação automatizado em plantação" loading="lazy">
+            </div>
+            <div class="card-tech-conteudo">
+              <div class="card-tech-icone icone-verde">
+                <i data-lucide="droplets" aria-hidden="true"></i>
+              </div>
+              <h3 class="card-tech-titulo">Irrigação Automatizada</h3>
+              <p class="card-tech-texto">
+                Sistemas que liberam água apenas quando o solo precisa,
+                evitando desperdício e garantindo a produtividade da lavoura.
+              </p>
+              <span class="card-tech-tag">Economia: -50% água</span>
+            </div>
+          </article>
+
+          <article class="card-tech" tabindex="0">
+            <div class="card-tech-imagem">
+              <img src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Tela de computador mostrando análise de dados agrícolas com inteligência artificial" loading="lazy">
+            </div>
+            <div class="card-tech-conteudo">
+              <div class="card-tech-icone icone-roxo">
+                <i data-lucide="brain-circuit" aria-hidden="true"></i>
+              </div>
+              <h3 class="card-tech-titulo">Inteligência Artificial</h3>
+              <p class="card-tech-texto">
+                Algoritmos que preveem colheitas, identificam doenças nas plantas
+                e otimizam toda a cadeia produtiva com dados em tempo real.
+              </p>
+              <span class="card-tech-tag">Aumento: +20% produtividade</span>
+            </div>
+          </article>
+
+          <article class="card-tech" tabindex="0">
+            <div class="card-tech-imagem">
+              <img src="https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Céu com nuvens de tempestade sobre plantação" loading="lazy">
+            </div>
+            <div class="card-tech-conteudo">
+              <div class="card-tech-icone icone-ciano">
+                <i data-lucide="cloud-sun" aria-hidden="true"></i>
+              </div>
+              <h3 class="card-tech-titulo">Monitoramento Climático</h3>
+              <p class="card-tech-texto">
+                Estações meteorológicas digitais preveem chuvas, geadas e secas,
+                ajudando o produtor a planejar melhor suas atividades no campo.
+              </p>
+              <span class="card-tech-tag">Previsão: 15 dias</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Sustentabilidade na Prática -->
+    <section class="secao" id="sustentabilidade" aria-labelledby="titulo-sustentabilidade">
+      <div class="container">
+        <div class="secao-cabecalho">
+          <span class="secao-tag">Sustentabilidade na Prática</span>
+          <h2 id="titulo-sustentabilidade" class="secao-titulo">Ações que fazem a diferença</h2>
+          <p class="secao-descricao">
+            Práticas sustentáveis que já estão sendo aplicadas no agronegócio brasileiro
+            e que podem ser adotadas por qualquer produtor rural.
+          </p>
+        </div>
+
+        <div class="sustentabilidade-grid">
+          <div class="sust-item">
+            <div class="sust-icone">
+              <i data-lucide="droplet" aria-hidden="true"></i>
+            </div>
+            <div class="sust-conteudo">
+              <h3>Economia de Água</h3>
+              <p>
+                A irrigação de precisão e o reuso de água podem reduzir o consumo
+                em até 50%, preservando mananciais e rios para a comunidade.
+              </p>
+              <span class="sust-dado">Até 50% de economia</span>
+            </div>
+          </div>
+
+          <div class="sust-item">
+            <div class="sust-icone icone-terra">
+              <i data-lucide="mountain" aria-hidden="true"></i>
+            </div>
+            <div class="sust-conteudo">
+              <h3>Preservação do Solo</h3>
+              <p>
+                Plantio direto, rotação de culturas e cobertura vegetal protegem
+                o solo da erosão e mantêm seus nutrientes naturais.
+              </p>
+              <span class="sust-dado">Reduz erosão em 90%</span>
+            </div>
+          </div>
+
+          <div class="sust-item">
+            <div class="sust-icone icone-laranja">
+              <i data-lucide="trash-2" aria-hidden="true"></i>
+            </div>
+            <div class="sust-conteudo">
+              <h3>Redução de Desperdício</h3>
+              <p>
+                Tecnologias de pós-colheita e logística inteligente evitam
+                que alimentos se percam no caminho do campo à mesa.
+              </p>
+              <span class="sust-dado">Evita 30% de perdas</span>
+            </div>
+          </div>
+
+          <div class="sust-item">
+            <div class="sust-icone icone-roxo">
+              <i data-lucide="target" aria-hidden="true"></i>
+            </div>
+            <div class="sust-conteudo">
+              <h3>Agricultura de Precisão</h3>
+              <p>
+                Aplicação de insumos somente onde são necessários,
+                reduzindo custos e impactos ambientais da produção.
+              </p>
+              <span class="sust-dado">-30% fertilizantes</span>
+            </div>
+          </div>
+
+          <div class="sust-item">
+            <div class="sust-icone icone-verde">
+              <i data-lucide="sun" aria-hidden="true"></i>
+            </div>
+            <div class="sust-conteudo">
+              <h3>Energia Renovável</h3>
+              <p>
+                Painéis solares e biodigestores transformam resíduos em energia
+                limpa, tornando a propriedade rural autossustentável.
+              </p>
+              <span class="sust-dado">100% energia limpa</span>
+            </div>
+          </div>
+
+          <div class="sust-item">
+            <div class="sust-icone icone-azul">
+              <i data-lucide="leaf" aria-hidden="true"></i>
+            </div>
+            <div class="sust-conteudo">
+              <h3>Recuperação de Áreas</h3>
+              <p>
+                Reflorestamento de APPs e recuperação de áreas degradadas
+                aumentam a biodiversidade e protegem os recursos hídricos.
+              </p>
+              <span class="sust-dado">+ biodiversity</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Simulador Inteligente -->
+    <section class="secao secao-fundo" id="simulador" aria-labelledby="titulo-simulador">
+      <div class="container">
+        <div class="secao-cabecalho">
+          <span class="secao-tag">Simulador Inteligente</span>
+          <h2 id="titulo-simulador" class="secao-titulo">Calcule os benefícios da agricultura sustentável</h2>
+          <p class="secao-descricao">
+            Informe os dados da sua propriedade e descubra quanto você pode economizar
+            adotando tecnologias e práticas sustentáveis no campo.
+          </p>
+        </div>
+
+        <div class="simulador-container">
+          <div class="simulador-form">
+            <h3 class="simulador-subtitulo">
+              <i data-lucide="clipboard-list" aria-hidden="true"></i>
+              Dados da Propriedade
+            </h3>
+
+            <div class="form-grupo">
+              <label for="area">Área da propriedade (hectares)</label>
+              <input type="number" id="area" min="0" step="0.1" placeholder="Ex: 50" aria-describedby="area-ajuda">
+              <span id="area-ajuda" class="form-ajuda">Informe a área total em hectares</span>
+              <span id="area-erro" class="form-erro" role="alert"></span>
+            </div>
+
+            <div class="form-grupo">
+              <label for="agua">Consumo de água (litros/dia)</label>
+              <input type="number" id="agua" min="0" step="100" placeholder="Ex: 10000" aria-describedby="agua-ajuda">
+              <span id="agua-ajuda" class="form-ajuda">Consumo médio diário de água</span>
+              <span id="agua-erro" class="form-erro" role="alert"></span>
+            </div>
+
+            <div class="form-grupo">
+              <label for="producao">Produção anual (toneladas)</label>
+              <input type="number" id="producao" min="0" step="0.1" placeholder="Ex: 200" aria-describedby="producao-ajuda">
+              <span id="producao-ajuda" class="form-ajuda">Produção total do último ano</span>
+              <span id="producao-erro" class="form-erro" role="alert"></span>
+            </div>
+
+            <div class="form-grupo">
+              <label for="cultura">Tipo de cultura</label>
+              <select id="cultura" aria-describedby="cultura-ajuda">
+                <option value="">Selecione...</option>
+                <option value="soja">Soja</option>
+                <option value="milho">Milho</option>
+                <option value="cafe">Café</option>
+                <option value="cana">Cana-de-açúcar</option>
+                <option value="hortaliças">Hortaliças</option>
+                <option value="frutas">Frutas</option>
+                <option value="outra">Outra</option>
+              </select>
+              <span id="cultura-erro" class="form-erro" role="alert"></span>
+            </div>
+
+            <button id="btn-calcular" class="btn btn-primario btn-full" type="button">
+              <i data-lucide="calculator" aria-hidden="true"></i>
+              Calcular Economia
+            </button>
+          </div>
+
+          <div class="simulador-resultado" id="simulador-resultado" aria-live="polite" aria-atomic="true">
+            <h3 class="simulador-subtitulo">
+              <i data-lucide="bar-chart-3" aria-hidden="true"></i>
+              Resultado da Simulação
+            </h3>
+            <div class="resultado-vazio">
+              <i data-lucide="calculator" aria-hidden="true"></i>
+              <p>Preencha os dados ao lado e clique em "Calcular Economia" para ver os resultados.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Quiz Educativo -->
+    <section class="secao" id="quiz" aria-labelledby="titulo-quiz">
+      <div class="container">
+        <div class="secao-cabecalho">
+          <span class="secao-tag">Quiz Educativo</span>
+          <h2 id="titulo-quiz" class="secao-titulo">Teste seus conhecimentos sobre sustentabilidade</h2>
+          <p class="secao-descricao">
+            Responda as perguntas e descubra o quanto você sabe sobre agricultura sustentável,
+            tecnologia no campo e preservação ambiental.
+          </p>
+        </div>
+
+        <div class="quiz-container" id="quiz-container">
+          <!-- Quiz será renderizado via JavaScript -->
+          <div class="quiz-inicio" id="quiz-inicio">
+            <div class="quiz-icone">
+              <i data-lucide="help-circle" aria-hidden="true"></i>
+            </div>
+            <h3 class="quiz-titulo-inicio">Vamos começar?</h3>
+            <p class="quiz-descricao-inicio">
+              10 perguntas sobre sustentabilidade, agropecuária, meio ambiente e tecnologia agrícola.
+            </p>
+            <button id="btn-iniciar-quiz" class="btn btn-primario">
+              <i data-lucide="play" aria-hidden="true"></i>
+              Iniciar Quiz
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Linha do Tempo -->
+    <section class="secao secao-fundo" id="linha-tempo" aria-labelledby="titulo-linha-tempo">
+      <div class="container">
+        <div class="secao-cabecalho">
+          <span class="secao-tag">Linha do Tempo</span>
+          <h2 id="titulo-linha-tempo" class="secao-titulo">A evolução da agricultura</h2>
+          <p class="secao-descricao">
+            Da agricultura tradicional à agricultura sustentável do futuro.
+            Conheça as principais revoluções que transformaram o campo.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-ponto"></div>
+            <div class="timeline-conteudo">
+              <span class="timeline-ano">Séculos Passados</span>
+              <h3>Agricultura Tradicional</h3>
+              <p>
+                Trabalho manual com enxada e arado puxado por animais.
+                Baixa produtividade e forte dependência das condições climáticas.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-ponto"></div>
+            <div class="timeline-conteudo">
+              <span class="timeline-ano">Década de 1960</span>
+              <h3>Revolução Verde</h3>
+              <p>
+                Mecanização com tratores, novas sementes e fertilizantes.
+                Aumento da produção, mas com maior impacto ambiental.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-ponto"></div>
+            <div class="timeline-conteudo">
+              <span class="timeline-ano">Década de 1990</span>
+              <h3>Plantio Direto</h3>
+              <p>
+                Técnica que elimina o revolvimento do solo, preservando
+                sua estrutura, umidade e organismos benéficos.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-ponto"></div>
+            <div class="timeline-conteudo">
+              <span class="timeline-ano">Década de 2010</span>
+              <h3>Agricultura Digital</h3>
+              <p>
+                GPS, sensores e softwares de gestão entram no campo.
+                A agricultura de precisão começa a se popularizar no Brasil.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-ponto"></div>
+            <div class="timeline-conteudo">
+              <span class="timeline-ano">Hoje</span>
+              <h3>Agricultura Sustentável</h3>
+              <p>
+                Integração de tecnologia, economia circular e preservação ambiental.
+                Produzir mais com menos, respeitando o meio ambiente.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-ponto ponto-futuro"></div>
+            <div class="timeline-conteudo">
+              <span class="timeline-ano">Futuro</span>
+              <h3>Agricultura 5.0</h3>
+              <p>
+                Inteligência artificial, robôs autônomos, biotecnologia avançada
+                e agricultura regenerativa que recupera ecossistemas.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Dashboard Interativo -->
+    <section class="secao" id="dashboard" aria-labelledby="titulo-dashboard">
+      <div class="container">
+        <div class="secao-cabecalho">
+          <span class="secao-tag">Dashboard Interativo</span>
+          <h2 id="titulo-dashboard" class="secao-titulo">Impactos da agricultura sustentável</h2>
+          <p class="secao-descricao">
+            Dados e estatísticas que mostram como a adoção de práticas sustentáveis
+            está transformando o agronegócio brasileiro.
+          </p>
+        </div>
+
+        <div class="dashboard-grid">
+          <div class="dashboard-card">
+            <h3 class="dashboard-titulo">
+              <i data-lucide="droplets" aria-hidden="true"></i>
+              Economia de Água
+            </h3>
+            <div class="dashboard-grafico">
+              <canvas id="grafico-agua" aria-label="Gráfico de economia de água na agricultura sustentável"></canvas>
+            </div>
+            <p class="dashboard-legenda">
+              Redução no consumo de água com irrigação de precisão (2015-2025)
+            </p>
+          </div>
+
+          <div class="dashboard-card">
+            <h3 class="dashboard-titulo">
+              <i data-lucide="cloud-off" aria-hidden="true"></i>
+              Redução de Emissões
+            </h3>
+            <div class="dashboard-grafico">
+              <canvas id="grafico-emissoes" aria-label="Gráfico de redução de emissões de carbono"></canvas>
+            </div>
+            <p class="dashboard-legenda">
+              Redução de emissões de CO₂ com práticas sustentáveis (2015-2025)
+            </p>
+          </div>
+
+          <div class="dashboard-card dashboard-card-full">
+            <h3 class="dashboard-titulo">
+              <i data-lucide="trending-up" aria-hidden="true"></i>
+              Crescimento da Produção Sustentável
+            </h3>
+            <div class="dashboard-grafico dashboard-grafico-largo">
+              <canvas id="grafico-producao" aria-label="Gráfico de crescimento da produção sustentável"></canvas>
+            </div>
+            <p class="dashboard-legenda">
+              Evolução da área cultivada com práticas sustentáveis no Brasil (2015-2025)
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Compromisso com o Futuro -->
+    <section class="secao secao-compromisso" id="compromisso" aria-labelledby="titulo-compromisso">
+      <div class="compromisso-overlay"></div>
+      <div class="container">
+        <div class="compromisso-conteudo">
+          <i data-lucide="heart-handshake" class="compromisso-icone" aria-hidden="true"></i>
+          <h2 id="titulo-compromisso" class="compromisso-titulo">
+            Nosso compromisso é com o futuro
+          </h2>
+          <p class="compromisso-texto">
+            Cada decisão que tomamos hoje define o mundo que viverão as próximas gerações.
+            A agricultura sustentável não é apenas uma escolha — é uma necessidade.
+            Juntos, podemos produzir alimentos de qualidade, preservar nossos recursos naturais
+            e construir um planeta mais verde, mais justo e mais próspero para todos.
+          </p>
+          <div class="compromisso-acoes">
+            <div class="compromisso-acao">
+              <i data-lucide="leaf" aria-hidden="true"></i>
+              <span>Preservar</span>
+            </div>
+            <div class="compromisso-acao">
+              <i data-lucide="recycle" aria-hidden="true"></i>
+              <span>Reutilizar</span>
+            </div>
+            <div class="compromisso-acao">
+              <i data-lucide="zap" aria-hidden="true"></i>
+              <span>Inovar</span>
+            </div>
+            <div class="compromisso-acao">
+              <i data-lucide="users" aria-hidden="true"></i>
+              <span>Educar</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 10. Rodapé -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-sobre">
+          <div class="footer-logo">
+            <i data-lucide="sprout" aria-hidden="true"></i>
+            <span>Agro Forte, Futuro Sustentável</span>
+          </div>
+          <p class="footer-descricao">
+            Projeto desenvolvido para o Concurso Agrinho 2026,
+            com o tema "Agro forte, futuro sustentável: equilíbrio entre produção e meio ambiente".
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="#desafio">O Desafio</a></li>
+            <li><a href="#tecnologia">Tecnologia</a></li>
+            <li><a href="#sustentabilidade">Sustentabilidade</a></li>
+            <li><a href="#simulador">Simulador</a></li>
+            <li><a href="#quiz">Quiz</a></li>
+            <li><a href="#dashboard">Dashboard</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Fontes</h4>
+          <ul>
+            <li><a href="https://www.fao.org/" target="_blank" rel="noopener noreferrer">FAO - ONU</a></li>
+            <li><a href="https://www.embrapa.br/" target="_blank" rel="noopener noreferrer">Embrapa</a></li>
+            <li><a href="https://www.gov.br/agricultura/" target="_blank" rel="noopener noreferrer">Ministério da Agricultura</a></li>
+            <li><a href="https://www.sistemafaep.org.br/" target="_blank" rel="noopener noreferrer">Sistema FAEP</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contato">
+          <h4>Projeto</h4>
+          <p><strong>Concurso:</strong> Agrinho 2026</p>
+          <p><strong>Tema:</strong> Agro forte, futuro sustentável</p>
+          <p><strong>Categoria:</strong> Programação</p>
+          <a href="#" class="footer-github" target="_blank" rel="noopener noreferrer">
+            <i data-lucide="github" aria-hidden="true"></i>
+            Ver no GitHub
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p> Concurso Agrinho 2026. Projeto educacional.</p>
+        <p>Desenvolvido com HTML5, CSS3 e JavaScript moderno.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
